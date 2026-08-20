@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aura Luxe | Salon & Studio — Effortless Elegance</title>
-  <meta name="description" content="Bespoke hair styling, luxury nail care, skin rituals, and holistic spa treatments in a calm, modern sanctuary. Book your appointment online today.">
+  <meta name="description" content="Bespoke hair architecture, trending haircut styles, beard sculpting, skin rituals, and holistic spa treatments. Book your appointment online today.">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,11 +29,11 @@
 
       <!-- Desktop Links -->
       <nav class="nav-links" id="navLinks">
-        <a href="#services" class="nav-item">Services</a>
+        <a href="#trending" class="nav-item">Trending Styles</a>
+        <a href="#services" class="nav-item">Services Menu</a>
         <a href="#booking" class="nav-item">Booking</a>
         <a href="#gallery" class="nav-item">Lookbook</a>
         <a href="#reviews" class="nav-item">Reviews</a>
-        <a href="#about" class="nav-item">About</a>
         <a href="#booking" class="btn btn-gold btn-nav-mobile">Book Appointment</a>
       </nav>
 
@@ -47,7 +47,7 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Interactive Atmosphere Carousel -->
   <section class="hero-section" id="hero">
     <div class="container hero-container">
       <div class="hero-text-col">
@@ -55,11 +55,11 @@
           <span class="pill-sparkle">✦</span> Sanctuary of Modern Beauty
         </div>
         <h1 class="hero-title">Effortless Elegance, Crafted for You</h1>
-        <p class="hero-subtitle">Bespoke hair styling, nail care, and spa treatments in a calm, modern sanctuary.</p>
+        <p class="hero-subtitle">Bespoke hair styling, precision beard sculpting, and luxury spa treatments in a calm, modern sanctuary.</p>
         
         <div class="hero-ctas">
           <a href="#booking" class="btn btn-gold btn-lg"><i class="fa-regular fa-calendar"></i> Book Appointment</a>
-          <a href="#services" class="btn btn-outline btn-lg"><i class="fa-solid fa-sparkles"></i> View Services</a>
+          <a href="#trending" class="btn btn-outline btn-lg"><i class="fa-solid fa-fire"></i> Explore Trending Styles</a>
         </div>
 
         <div class="hero-features">
@@ -75,28 +75,185 @@
         </div>
       </div>
 
+      <!-- Hero Image Slider / Carousel -->
       <div class="hero-visual-col">
-        <div class="hero-image-card">
-          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80" alt="Aura Luxe Modern Salon Interior" class="hero-img">
+        <div class="hero-slider-wrapper">
+          <div class="hero-slider-track" id="heroSliderTrack">
+            
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+              <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80" alt="Main Salon Sanctuary" class="hero-slide-img">
+              <div class="slide-caption-tag">Main Salon Sanctuary</div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+              <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=80" alt="VIP Styling & Whiskey Lounge" class="hero-slide-img">
+              <div class="slide-caption-tag">VIP Espresso & Drinks Bar</div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Private Hair Architecture Suite" class="hero-slide-img">
+              <div class="slide-caption-tag">Private Hair Architecture Suite</div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="hero-slide">
+              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80" alt="Botanical Spa Therapy Bay" class="hero-slide-img">
+              <div class="slide-caption-tag">Botanical Spa Therapy Bay</div>
+            </div>
+
+          </div>
+
+          <!-- Slider Controls -->
+          <button class="slider-btn btn-prev" id="sliderPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="slider-btn btn-next" id="sliderNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+
+          <!-- Slider Pagination Dots -->
+          <div class="slider-dots" id="sliderDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+          </div>
+
+          <!-- Floating Badge -->
           <div class="hero-floating-card">
             <div class="floating-rating">
               <span class="rating-stars">★★★★★</span>
               <span class="rating-score">4.9 / 5.0</span>
             </div>
-            <p class="floating-text">"The most peaceful and chic salon experience in the city."</p>
+            <p class="floating-text">"The most peaceful and chic salon experience in Soho."</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About & Philosophy Strip -->
-  <section class="section about-strip" id="about">
-    <div class="container text-center">
-      <span class="section-subtitle">OUR PHILOSOPHY</span>
-      <h2 class="section-title">Where Mindful Beauty Meets Modern Artistry</h2>
-      <div class="sand-divider"></div>
-      <p class="section-desc">At Aura Luxe, we believe beauty should feel natural, serene, and uniquely tailored to your lifestyle. Step away from the city bustle into an intimate atmosphere of warm alabaster tones, soft acoustic ambiance, and dedicated master artisans.</p>
+  <!-- Trending Hairstyles & Beard Styles Section -->
+  <section class="section trending-section" id="trending">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">POPULAR LOOKS & ARTISTRY</span>
+        <h2 class="section-title">Trending Hairstyles & Beard Styles</h2>
+        <div class="sand-divider"></div>
+        <p class="section-desc">Explore our top-requested haircut transformations and beard sculpting rituals, priced transparently with direct reservation triggers.</p>
+      </div>
+
+      <!-- Trending Category Filter -->
+      <div class="category-tabs">
+        <button class="tab-btn active" data-filter="all">All Trending Looks</button>
+        <button class="tab-btn" data-filter="haircut"><i class="fa-solid fa-scissors"></i> Hairstyles & Cuts</button>
+        <button class="tab-btn" data-filter="beard"><i class="fa-solid fa-user-tie"></i> Beard Sculpting</button>
+      </div>
+
+      <!-- Trending Cards Grid -->
+      <div class="trending-grid" id="trendingGrid">
+        
+        <!-- Style 1: Mid Skin Fade Haircut -->
+        <div class="trending-card" data-style-type="haircut">
+          <div class="trending-image-box">
+            <img src="assets/haircut_fade.jpg" alt="Executive Mid Skin Fade Haircut" class="trending-img">
+            <div class="trending-badge hot"><i class="fa-solid fa-fire"></i> TRENDING</div>
+            <div class="trending-price-tag">$55</div>
+          </div>
+          <div class="trending-content">
+            <span class="trending-cat">Haircut • 45 Mins</span>
+            <h3 class="trending-title">Executive Mid Skin Fade</h3>
+            <p class="trending-desc">Seamless gradient transition from razor skin to dense textured top length with razor-crisp hairline lineup.</p>
+            <div class="trending-footer">
+              <a href="#booking" class="btn btn-gold w-100 btn-select-service" data-name="Executive Mid Skin Fade Haircut ($55)">Book This Cut</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Style 2: French Textured Crop -->
+        <div class="trending-card" data-style-type="haircut">
+          <div class="trending-image-box">
+            <img src="assets/haircut_crop.jpg" alt="French Textured Crop & Drop Fade" class="trending-img">
+            <div class="trending-badge hot"><i class="fa-solid fa-fire"></i> TRENDING</div>
+            <div class="trending-price-tag">$60</div>
+          </div>
+          <div class="trending-content">
+            <span class="trending-cat">Haircut • 45 Mins</span>
+            <h3 class="trending-title">French Textured Crop & Drop Fade</h3>
+            <p class="trending-desc">Heavy forward texturing on top with blunt fringe framing, paired with a subtle drop taper around nape and ears.</p>
+            <div class="trending-footer">
+              <a href="#booking" class="btn btn-gold w-100 btn-select-service" data-name="French Textured Crop Haircut ($60)">Book This Cut</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Style 3: Royal Sculpted Full Beard -->
+        <div class="trending-card" data-style-type="beard">
+          <div class="trending-image-box">
+            <img src="assets/beard_sculpted.jpg" alt="The Royal Sculpted Full Beard" class="trending-img">
+            <div class="trending-badge hot"><i class="fa-solid fa-fire"></i> TRENDING</div>
+            <div class="trending-price-tag">$45</div>
+          </div>
+          <div class="trending-content">
+            <span class="trending-cat">Beard Grooming • 30 Mins</span>
+            <h3 class="trending-title">The Royal Sculpted Full Beard</h3>
+            <p class="trending-desc">Hand-sculpted foliage taper with straight-razor cheek lines, mustache contouring, and hot tea tree oil hydration wrap.</p>
+            <div class="trending-footer">
+              <a href="#booking" class="btn btn-gold w-100 btn-select-service" data-name="Royal Sculpted Full Beard ($45)">Book Beard Trim</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Style 4: Royal Modern Pompadour -->
+        <div class="trending-card" data-style-type="haircut">
+          <div class="trending-image-box">
+            <img src="assets/haircut_pompadour.jpg" alt="Royal Modern Pompadour Cut" class="trending-img">
+            <div class="trending-badge classic">CLASSIC FAV</div>
+            <div class="style-price-tag">$65</div>
+          </div>
+          <div class="trending-content">
+            <span class="trending-cat">Haircut • 45 Mins</span>
+            <h3 class="trending-title">Royal Modern Pompadour Cut</h3>
+            <p class="trending-desc">High-volume swept back crown structured with medium-shine luxury pomade and tailored scissor-tapered sides.</p>
+            <div class="trending-footer">
+              <a href="#booking" class="btn btn-gold w-100 btn-select-service" data-name="Royal Modern Pompadour Cut ($65)">Book This Cut</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Style 5: Razor Lineup & Stubble Shaping -->
+        <div class="trending-card" data-style-type="beard">
+          <div class="trending-image-box">
+            <img src="assets/beard_lineup.jpg" alt="Razor Lineup & Stubble Shaping" class="trending-img">
+            <div class="trending-badge hot"><i class="fa-solid fa-fire"></i> TRENDING</div>
+            <div class="trending-price-tag">$35</div>
+          </div>
+          <div class="trending-content">
+            <span class="trending-cat">Beard Artistry • 25 Mins</span>
+            <h3 class="trending-title">Razor Lineup & Stubble Shaping</h3>
+            <p class="trending-desc">Ultra-clean Japanese Feather razor definition along cheek and neck lines with soothing eucalyptus post-shave balm.</p>
+            <div class="trending-footer">
+              <a href="#booking" class="btn btn-gold w-100 btn-select-service" data-name="Razor Lineup & Beard Shaping ($35)">Book Beard Lineup</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Style 6: Traditional Hot Towel Shave -->
+        <div class="trending-card" data-style-type="beard">
+          <div class="trending-image-box">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Traditional Hot Towel Straight Razor Shave" class="trending-img">
+            <div class="trending-badge signature">SIGNATURE SPA</div>
+            <div class="trending-price-tag">$50</div>
+          </div>
+          <div class="trending-content">
+            <span class="trending-cat">Luxury Spa • 40 Mins</span>
+            <h3 class="trending-title">Hot Towel Straight-Razor Shave</h3>
+            <p class="trending-desc">Traditional barbershop shave with dual steam towel wraps, badger brush lather, double-pass razor, and cold towel pore sealing.</p>
+            <div class="trending-footer">
+              <a href="#booking" class="btn btn-gold w-100 btn-select-service" data-name="Hot Towel Straight Razor Shave ($50)">Book Shave Spa</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -105,26 +262,17 @@
     <div class="container">
       <div class="section-header text-center">
         <span class="section-subtitle">CURATED MENU</span>
-        <h2 class="section-title">Services We Provide</h2>
+        <h2 class="section-title">Full Services & Pricing Menu</h2>
         <div class="sand-divider"></div>
         <p class="section-desc">Select from our signature hair architecture, nail couture, skin renewal, and holistic spa treatments.</p>
       </div>
 
-      <!-- Category Filter Tabs -->
-      <div class="category-tabs">
-        <button class="tab-btn active" data-category="hair"><i class="fa-solid fa-scissors"></i> Hair Architecture</button>
-        <button class="tab-btn" data-category="nails"><i class="fa-solid fa-hand-sparkles"></i> Nail Couture</button>
-        <button class="tab-btn" data-category="skincare"><i class="fa-solid fa-feather"></i> Skin Renewal</button>
-        <button class="tab-btn" data-category="spa"><i class="fa-solid fa-spa"></i> Holistic Spa</button>
-      </div>
-
       <!-- Services Pricing Grid -->
-      <div class="services-grid" id="servicesGrid">
+      <div class="services-grid">
         
-        <!-- Category: HAIR -->
-        <div class="service-card" data-cat="hair">
+        <div class="service-card">
           <div class="service-card-header">
-            <span class="service-badge">Signature</span>
+            <span class="service-badge">Hair</span>
             <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 Mins</span>
           </div>
           <h3 class="service-title">Aura Couture Cut & Blowout</h3>
@@ -135,9 +283,9 @@
           </div>
         </div>
 
-        <div class="service-card" data-cat="hair">
+        <div class="service-card">
           <div class="service-card-header">
-            <span class="service-badge">Popular</span>
+            <span class="service-badge">Color</span>
             <span class="service-duration"><i class="fa-regular fa-clock"></i> 90 Mins</span>
           </div>
           <h3 class="service-title">Balayage & Gloss Treatment</h3>
@@ -148,21 +296,7 @@
           </div>
         </div>
 
-        <div class="service-card" data-cat="hair">
-          <div class="service-card-header">
-            <span class="service-badge">Restoration</span>
-            <span class="service-duration"><i class="fa-regular fa-clock"></i> 45 Mins</span>
-          </div>
-          <h3 class="service-title">Organic Botanical Scalp Spa</h3>
-          <p class="service-desc">Exfoliating scalp detox ritual infused with rosemary, eucalyptus, and warm steam infusion for optimal hair growth.</p>
-          <div class="service-card-footer">
-            <span class="service-price">$75</span>
-            <a href="#booking" class="btn btn-sm btn-gold btn-select-service" data-name="Organic Botanical Scalp Spa">Select & Book</a>
-          </div>
-        </div>
-
-        <!-- Category: NAILS -->
-        <div class="service-card" data-cat="nails" style="display:none;">
+        <div class="service-card">
           <div class="service-card-header">
             <span class="service-badge">Nails</span>
             <span class="service-duration"><i class="fa-regular fa-clock"></i> 50 Mins</span>
@@ -175,23 +309,9 @@
           </div>
         </div>
 
-        <div class="service-card" data-cat="nails" style="display:none;">
+        <div class="service-card">
           <div class="service-card-header">
-            <span class="service-badge">Luxury</span>
-            <span class="service-duration"><i class="fa-regular fa-clock"></i> 70 Mins</span>
-          </div>
-          <h3 class="service-title">Aura Luxe Spa Pedicure</h3>
-          <p class="service-desc">Warm chamomile foot soak, botanical sugar scrub, massage with warm stone therapy, and non-toxic polish finish.</p>
-          <div class="service-card-footer">
-            <span class="service-price">$85</span>
-            <a href="#booking" class="btn btn-sm btn-gold btn-select-service" data-name="Aura Luxe Spa Pedicure">Select & Book</a>
-          </div>
-        </div>
-
-        <!-- Category: SKINCARE -->
-        <div class="service-card" data-cat="skincare" style="display:none;">
-          <div class="service-card-header">
-            <span class="service-badge">Glow</span>
+            <span class="service-badge">Skincare</span>
             <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 Mins</span>
           </div>
           <h3 class="service-title">Radiance Hydrafacial & LED Ritual</h3>
@@ -199,20 +319,6 @@
           <div class="service-card-footer">
             <span class="service-price">$165</span>
             <a href="#booking" class="btn btn-sm btn-gold btn-select-service" data-name="Radiance Hydrafacial & LED Ritual">Select & Book</a>
-          </div>
-        </div>
-
-        <!-- Category: SPA -->
-        <div class="service-card" data-cat="spa" style="display:none;">
-          <div class="service-card-header">
-            <span class="service-badge">Wellness</span>
-            <span class="service-duration"><i class="fa-regular fa-clock"></i> 75 Mins</span>
-          </div>
-          <h3 class="service-title">Warm Aromatherapy Stone Massage</h3>
-          <p class="service-desc">Deep relaxation body massage combining smooth basalt volcanic stones with custom essential lavender oil.</p>
-          <div class="service-card-footer">
-            <span class="service-price">$150</span>
-            <a href="#booking" class="btn btn-sm btn-gold btn-select-service" data-name="Warm Aromatherapy Stone Massage">Select & Book</a>
           </div>
         </div>
 
@@ -240,18 +346,21 @@
             </label>
             <select id="bookingServiceSelect" class="form-control" required>
               <option value="" disabled selected>Select from Menu...</option>
-              <optgroup label="Hair Architecture">
+              <optgroup label="Trending Cuts & Beards">
+                <option value="Executive Mid Skin Fade Haircut ($55)">Executive Mid Skin Fade ($55 • 45m)</option>
+                <option value="French Textured Crop Haircut ($60)">French Textured Crop ($60 • 45m)</option>
+                <option value="Royal Sculpted Full Beard ($45)">Royal Sculpted Full Beard ($45 • 30m)</option>
+                <option value="Royal Modern Pompadour Cut ($65)">Royal Modern Pompadour ($65 • 45m)</option>
+                <option value="Razor Lineup & Beard Shaping ($35)">Razor Lineup & Beard Shaping ($35 • 25m)</option>
+                <option value="Hot Towel Straight Razor Shave ($50)">Hot Towel Straight Razor Shave ($50 • 40m)</option>
+              </optgroup>
+              <optgroup label="Hair & Color Architecture">
                 <option value="Aura Couture Cut & Blowout ($95)">Aura Couture Cut & Blowout ($95 • 60m)</option>
                 <option value="Balayage & Gloss Treatment ($240)">Balayage & Gloss Treatment ($240 • 90m)</option>
-                <option value="Organic Botanical Scalp Spa ($75)">Organic Botanical Scalp Spa ($75 • 45m)</option>
               </optgroup>
-              <optgroup label="Nail Couture">
+              <optgroup label="Nails & Spa">
                 <option value="Minimalist Gel Manicure ($65)">Minimalist Gel Manicure ($65 • 50m)</option>
-                <option value="Aura Luxe Spa Pedicure ($85)">Aura Luxe Spa Pedicure ($85 • 70m)</option>
-              </optgroup>
-              <optgroup label="Skincare & Spa">
                 <option value="Radiance Hydrafacial & LED ($165)">Radiance Hydrafacial & LED ($165 • 60m)</option>
-                <option value="Warm Aromatherapy Stone Massage ($150)">Warm Aromatherapy Stone Massage ($150 • 75m)</option>
               </optgroup>
             </select>
           </div>
@@ -338,10 +447,18 @@
 
       <div class="lookbook-grid">
         <div class="lookbook-card">
-          <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80" alt="Dimensional Hair Transformation" class="lookbook-img">
+          <img src="assets/haircut_fade.jpg" alt="Dimensional Hair Transformation" class="lookbook-img">
           <div class="lookbook-overlay">
-            <span class="lookbook-tag">Hair Artistry</span>
-            <h4 class="lookbook-title">Sun-Kissed Balayage & Gloss</h4>
+            <span class="lookbook-tag">Hair Architecture</span>
+            <h4 class="lookbook-title">Executive Fade & Lineup</h4>
+          </div>
+        </div>
+
+        <div class="lookbook-card">
+          <img src="assets/beard_sculpted.jpg" alt="Beard Sculpting Ritual" class="lookbook-img">
+          <div class="lookbook-overlay">
+            <span class="lookbook-tag">Beard Studio</span>
+            <h4 class="lookbook-title">Royal Full Beard Trim</h4>
           </div>
         </div>
 
@@ -350,14 +467,6 @@
           <div class="lookbook-overlay">
             <span class="lookbook-tag">Nail Couture</span>
             <h4 class="lookbook-title">Nude Botanical Gel Details</h4>
-          </div>
-        </div>
-
-        <div class="lookbook-card">
-          <img src="https://images.unsplash.com/photo-1512290900673-700200411798?auto=format&fit=crop&w=800&q=80" alt="Botanical Oils and Textures" class="lookbook-img">
-          <div class="lookbook-overlay">
-            <span class="lookbook-tag">Pure Botanicals</span>
-            <h4 class="lookbook-title">Cold-Pressed Essential Oils</h4>
           </div>
         </div>
 
@@ -385,19 +494,19 @@
       <div class="reviews-grid">
         <div class="review-card">
           <div class="review-rating">★★★★★</div>
-          <p class="review-quote">"Aura Luxe is pure peace. The balayage came out exactly as I envisioned, and the complimentary matcha tea made the afternoon feel like a mini vacation."</p>
+          <p class="review-quote">"Hands down the best skin fade and beard trim in the city. The private styling suite and complimentary bourbon made the experience incredible."</p>
           <div class="review-author">
-            <span class="author-name">Elena Rostova</span>
-            <span class="author-tag">Verified Guest • Hair & Scalp Spa</span>
+            <span class="author-name">David Miller</span>
+            <span class="author-tag">Verified Guest • Mid Skin Fade & Beard Trim</span>
           </div>
         </div>
 
         <div class="review-card">
           <div class="review-rating">★★★★★</div>
-          <p class="review-quote">"The minimalist gel manicure lasted over 4 weeks without a single chip. Cleanest, quietest nail studio I've visited in Soho."</p>
+          <p class="review-quote">"Aura Luxe is pure peace. The French textured crop came out exactly as I envisioned, and the hot towel shave was completely relaxing."</p>
           <div class="review-author">
-            <span class="author-name">Clara Montgomery</span>
-            <span class="author-tag">Verified Guest • Gel Manicure</span>
+            <span class="author-name">Julian Ross</span>
+            <span class="author-tag">Verified Guest • Crop Cut & Hot Towel Shave</span>
           </div>
         </div>
 
@@ -421,7 +530,7 @@
           <span class="logo-text-main">AURA LUXE</span>
           <span class="logo-text-sub">SALON & STUDIO</span>
         </a>
-        <p class="footer-about">An intentional space created for modern beauty, holistic relaxation, and effortless elegance.</p>
+        <p class="footer-about">An intentional space created for modern hair architecture, beard sculpting, holistic relaxation, and effortless elegance.</p>
         <div class="social-row">
           <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
