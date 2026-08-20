@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA | Atelier & Luxury Grooming Lounge</title>
+  <meta name="description" content="Experience bespoke hair architecture, precision beard sculpting, and modern luxury grooming at AURA Atelier. Book your appointment online today.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar / Live Status Indicator -->
+  <div class="top-bar" id="topBar">
+    <div class="container top-bar-content">
+      <div class="live-status-container">
+        <span class="pulse-dot" id="livePulse"></span>
+        <span class="status-text" id="liveStatusText">Checking Opening Status...</span>
+        <span class="hours-hint" id="liveHoursHint"></span>
+      </div>
+      <div class="top-contacts">
+        <span><i class="fa-solid fa-location-dot"></i> 450 Fifth Avenue, Suite 12, Manhattan, NY</span>
+        <span><i class="fa-solid fa-phone"></i> (212) 555-0198</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-mark">A</span>
+        <div class="logo-text">
+          <span class="brand-name">AURA</span>
+          <span class="brand-sub">ATELIER & GROOMING</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#hours" class="nav-link">Hours</a>
+        <a href="#haircuts" class="nav-link">Haircuts</a>
+        <a href="#beards" class="nav-link">Beard Styles</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#gallery" class="nav-link">Atmosphere</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#booking" class="nav-link btn-nav-mobile">Book Appointment</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="nav-actions">
+        <a href="#booking" class="btn btn-gold btn-header"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg" style="background-image: url('assets/salon_hero.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="luxury-badge">
+          <i class="fa-solid fa-crown"></i> Premier Luxury Grooming Lounge
+        </div>
+        <h1 class="hero-title">Bespoke Hair Architecture & Master Beard Sculpting</h1>
+        <p class="hero-description">Where traditional precision meets contemporary luxury. Step into an atmosphere of quiet sophistication, craft cocktails, hot towels, and world-class master barbers.</p>
+
+        <!-- Dynamic Hours Quick View Card -->
+        <div class="hero-hours-card">
+          <div class="hours-card-header">
+            <div class="hours-card-badge" id="heroStatusBadge">
+              <span class="status-indicator-dot"></span> <span id="heroStatusText">OPEN TODAY</span>
+            </div>
+            <div class="hours-time-range" id="heroTodayHours">9:00 AM – 9:00 PM</div>
+          </div>
+          <p class="hours-card-sub"><i class="fa-regular fa-clock"></i> Walk-ins welcomed • Reservations recommended</p>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#booking" class="btn btn-gold btn-lg"><i class="fa-solid fa-calendar-alt"></i> Book Appointment</a>
+          <a href="#haircuts" class="btn btn-outline btn-lg"><i class="fa-solid fa-scissors"></i> Explore Haircuts</a>
+        </div>
+
+        <!-- Metric Highlights -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">4.9 ★</span>
+            <span class="stat-label">1,200+ Verified Reviews</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Master Stylists & Barbers</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Bespoke Client Guarantee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opening & Closing Display Section -->
+  <section class="section hours-section" id="hours">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">OUR TIMINGS & AVAILABILITY</span>
+        <h2 class="section-title">Opening & Closing Schedule</h2>
+        <div class="gold-divider"></div>
+        <p class="section-desc">We operate 7 days a week with flexible morning and evening appointment slots to suit your executive schedule.</p>
+      </div>
+
+      <div class="hours-grid">
+        <!-- Live Operating Status Card -->
+        <div class="hours-live-card">
+          <div class="live-card-badge" id="liveCardBadge">
+            <span class="badge-dot"></span> <span id="liveCardStatus">WE ARE OPEN</span>
+          </div>
+          <h3 class="live-card-title" id="liveCardTitle">Current Salon Status</h3>
+          <p class="live-card-desc" id="liveCardDesc">Our master craftsmen are currently in session. Book your appointment now for guaranteed immediate seating or reserve for later today.</p>
+          <div class="live-card-clock">
+            <div class="time-display" id="currentTimeClock">10:45:22 AM</div>
+            <div class="day-display" id="currentDayDisplay">Thursday, August 20</div>
+          </div>
+          <a href="#booking" class="btn btn-gold w-100"><i class="fa-solid fa-calendar-plus"></i> Reserve Your Chair</a>
+        </div>
+
+        <!-- Weekly Schedule Table -->
+        <div class="hours-table-card">
+          <h3 class="card-subtitle"><i class="fa-regular fa-calendar-days"></i> Weekly Salon Schedule</h3>
+          <div class="schedule-table">
+            <div class="schedule-row" data-day="1">
+              <span class="day-name">Monday</span>
+              <span class="day-status">Open</span>
+              <span class="day-time">9:00 AM – 8:00 PM</span>
+            </div>
+            <div class="schedule-row" data-day="2">
+              <span class="day-name">Tuesday</span>
+              <span class="day-status">Open</span>
+              <span class="day-time">9:00 AM – 8:00 PM</span>
+            </div>
+            <div class="schedule-row" data-day="3">
+              <span class="day-name">Wednesday</span>
+              <span class="day-status">Open</span>
+              <span class="day-time">9:00 AM – 9:00 PM</span>
+            </div>
+            <div class="schedule-row" data-day="4">
+              <span class="day-name">Thursday</span>
+              <span class="day-status">Open</span>
+              <span class="day-time">9:00 AM – 9:00 PM</span>
+            </div>
+            <div class="schedule-row" data-day="5">
+              <span class="day-name">Friday</span>
+              <span class="day-status">Open</span>
+              <span class="day-time">8:30 AM – 9:30 PM</span>
+            </div>
+            <div class="schedule-row highlight-weekend" data-day="6">
+              <span class="day-name">Saturday</span>
+              <span class="day-status">Open</span>
+              <span class="day-time">8:00 AM – 8:00 PM</span>
+            </div>
+            <div class="schedule-row highlight-weekend" data-day="0">
+              <span class="day-name">Sunday</span>
+              <span class="day-status">Open</span>
+              <span class="day-time">10:00 AM – 6:00 PM</span>
+            </div>
+          </div>
+          <div class="schedule-footer">
+            <i class="fa-solid fa-circle-info"></i> Complimentary single-malt whiskey, espresso, and craft beer served with all services.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Types of Haircuts Section -->
+  <section class="section haircuts-section" id="haircuts">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">HAIR ARCHITECTURE & STYLING</span>
+        <h2 class="section-title">Types of Haircuts & Signature Cuts</h2>
+        <div class="gold-divider"></div>
+        <p class="section-desc">Each haircut begins with an in-depth structural consultation based on head shape, hair density, and lifestyle alignment.</p>
+      </div>
+
+      <!-- Haircuts Category Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Styles</button>
+        <button class="filter-btn" data-filter="fade">Fades & Tapers</button>
+        <button class="filter-btn" data-filter="crop">Textured Crops</button>
+        <button class="filter-btn" data-filter="classic">Classic & Executive</button>
+      </div>
+
+      <!-- Haircuts Showcase Grid -->
+      <div class="style-grid" id="haircutGrid">
+        
+        <!-- Style 1: Executive Skin Fade -->
+        <div class="style-card" data-category="fade">
+          <div class="style-image-wrapper">
+            <img src="assets/haircut_fade.jpg" alt="Executive Skin Fade Haircut" class="style-image">
+            <div class="style-badge">Top Trending</div>
+            <div class="style-overlay">
+              <button class="btn btn-sm btn-gold quick-detail-btn" data-style="fade-1">View Details</button>
+            </div>
+          </div>
+          <div class="style-info">
+            <div class="style-meta">
+              <span class="style-category"><i class="fa-solid fa-tag"></i> Skin Fade</span>
+              <span class="style-price">$55</span>
+            </div>
+            <h3 class="style-title">The Executive Mid Skin Fade</h3>
+            <p class="style-desc">Seamless gradient transition from razor skin to dense textured length on top with razor crisp hairline lineup.</p>
+            <div class="style-specs">
+              <span><i class="fa-solid fa-user-gear"></i> Best for: Oval & Square faces</span>
+              <span><i class="fa-solid fa-arrows-rotate"></i> Touchup: 2-3 Weeks</span>
+            </div>
+            <a href="#booking" class="btn btn-outline-gold w-100 btn-select-style" data-service="Executive Skin Fade">Book This Cut</a>
+          </div>
+        </div>
+
+        <!-- Style 2: Textured Modern Crop -->
+        <div class="style-card" data-category="crop">
+          <div class="style-image-wrapper">
+            <img src="assets/haircut_crop.jpg" alt="Textured Modern Crop Haircut" class="style-image">
+            <div class="style-badge">Urban Modern</div>
+            <div class="style-overlay">
+              <button class="btn btn-sm btn-gold quick-detail-btn" data-style="crop-1">View Details</button>
+            </div>
+          </div>
+          <div class="style-info">
+            <div class="style-meta">
+              <span class="style-category"><i class="fa-solid fa-tag"></i> Textured Crop</span>
+              <span class="style-price">$60</span>
+            </div>
+            <h3 class="style-title">French Textured Crop & Drop Fade</h3>
+            <p class="style-desc">Heavy forward texturing on top with blunt fringe framing, paired with a subtle drop taper around the nape and ears.</p>
+            <div class="style-specs">
+              <span><i class="fa-solid fa-user-gear"></i> Best for: Round & Diamond faces</span>
+              <span><i class="fa-solid fa-arrows-rotate"></i> Touchup: 3 Weeks</span>
+            </div>
+            <a href="#booking" class="btn btn-outline-gold w-100 btn-select-style" data-service="Textured Crop Haircut">Book This Cut</a>
+          </div>
+        </div>
+
+        <!-- Style 3: Classic Modern Pompadour -->
+        <div class="style-card" data-category="classic">
+          <div class="style-image-wrapper">
+            <img src="assets/haircut_pompadour.jpg" alt="Classic Modern Pompadour Haircut" class="style-image">
+            <div class="style-badge">Timeless Luxury</div>
+            <div class="style-overlay">
+              <button class="btn btn-sm btn-gold quick-detail-btn" data-style="pomp-1">View Details</button>
+            </div>
+          </div>
+          <div class="style-info">
+            <div class="style-meta">
+              <span class="style-category"><i class="fa-solid fa-tag"></i> Classic Gentlemen</span>
+              <span class="style-price">$65</span>
+            </div>
+            <h3 class="style-title">The Royal Modern Pompadour</h3>
+            <p class="style-desc">High-volume swept back crown structured with medium-shine luxury pomade and tailored scissor-tapered sides.</p>
+            <div class="style-specs">
+              <span><i class="fa-solid fa-user-gear"></i> Best for: Oval & Heart faces</span>
+              <span><i class="fa-solid fa-arrows-rotate"></i> Touchup: 3-4 Weeks</span>
+            </div>
+            <a href="#booking" class="btn btn-outline-gold w-100 btn-select-style" data-service="Modern Pompadour Haircut">Book This Cut</a>
+          </div>
+        </div>
+
+        <!-- Style 4: Low Taper Fade & Natural Wave -->
+        <div class="style-card" data-category="fade">
+          <div class="style-image-wrapper">
+            <img src="assets/haircut_taper.jpg" alt="Low Taper Fade & Natural Wave" class="style-image">
+            <div class="style-badge">Subtle & Clean</div>
+            <div class="style-overlay">
+              <button class="btn btn-sm btn-gold quick-detail-btn" data-style="taper-1">View Details</button>
+            </div>
+          </div>
+          <div class="style-info">
+            <div class="style-meta">
+              <span class="style-category"><i class="fa-solid fa-tag"></i> Low Taper</span>
+              <span class="style-price">$50</span>
+            </div>
+            <h3 class="style-title">Executive Low Taper & Flow</h3>
+            <p class="style-desc">Subtle temple and nape fades preserving natural hair weight along the sides, ideal for professional boardroom elegance.</p>
+            <div class="style-specs">
+              <span><i class="fa-solid fa-user-gear"></i> Best for: All Face Types</span>
+              <span><i class="fa-solid fa-arrows-rotate"></i> Touchup: 3 Weeks</span>
+            </div>
+            <a href="#booking" class="btn btn-outline-gold w-100 btn-select-style" data-service="Executive Taper Fade">Book This Cut</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Beard Styles & Sculpting Section -->
+  <section class="section beards-section" id="beards">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">FACIAL HAIR ARTISTRY</span>
+        <h2 class="section-title">Beard Sculpting & Razor Lineup Section</h2>
+        <div class="gold-divider"></div>
+        <p class="section-desc">Precision beard shaping, straight-razor cheek edging, conditioning essential oil treatments, and relaxing steam hot towels.</p>
+      </div>
+
+      <div class="beard-grid">
+
+        <!-- Beard Style 1 -->
+        <div class="beard-card">
+          <div class="beard-image-box">
+            <img src="assets/beard_sculpted.jpg" alt="Royal Sculpted Full Beard" class="beard-img">
+            <div class="beard-price-tag">$45</div>
+          </div>
+          <div class="beard-details">
+            <div class="beard-tag"><i class="fa-solid fa-crown"></i> Full Beard</div>
+            <h3 class="beard-title">The Royal Sculpted Full Beard</h3>
+            <p class="beard-desc">Hand-sculpted foliage taper with sharp cheek straight-razor lines, mustache contouring, and hot oil hydration wrap.</p>
+            <ul class="beard-features">
+              <li><i class="fa-solid fa-check"></i> Freehand scissor contouring</li>
+              <li><i class="fa-solid fa-check"></i> Straight-razor neck & cheek line</li>
+              <li><i class="fa-solid fa-check"></i> Essential tea tree hot towel treatment</li>
+            </ul>
+            <a href="#booking" class="btn btn-gold w-100 btn-select-service" data-service="Royal Sculpted Full Beard">Book Beard Service</a>
+          </div>
+        </div>
+
+        <!-- Beard Style 2 -->
+        <div class="beard-card">
+          <div class="beard-image-box">
+            <img src="assets/beard_lineup.jpg" alt="Precision Razor Beard Lineup" class="beard-img">
+            <div class="beard-price-tag">$35</div>
+          </div>
+          <div class="beard-details">
+            <div class="beard-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Crisp Edge</div>
+            <h3 class="beard-title">Razor Lineup & Stubble Shaping</h3>
+            <p class="beard-desc">Ultra-clean razor definition along jaw and neck lines for sharp stubble or short beard styles. Includes soothing balm.</p>
+            <ul class="beard-features">
+              <li><i class="fa-solid fa-check"></i> Warm pre-shave lather application</li>
+              <li><i class="fa-solid fa-check"></i> Japanese Feather razor edging</li>
+              <li><i class="fa-solid fa-check"></i> Cooling aloe & eucalyptus post-shave</li>
+            </ul>
+            <a href="#booking" class="btn btn-gold w-100 btn-select-service" data-service="Razor Lineup & Beard Shaping">Book Beard Service</a>
+          </div>
+        </div>
+
+        <!-- Beard Style 3 -->
+        <div class="beard-card">
+          <div class="beard-image-box">
+            <img src="assets/haircut_fade.jpg" alt="Hot Towel Luxury Shave" class="beard-img">
+            <div class="beard-price-tag">$50</div>
+          </div>
+          <div class="beard-details">
+            <div class="beard-tag"><i class="fa-solid fa-spa"></i> Signature Spa</div>
+            <h3 class="beard-title">Traditional Hot Towel Straight-Razor Shave</h3>
+            <p class="beard-desc">The ultimate traditional barbershop shave. Dual hot towel infusion, badger brush lather, double pass razor shave.</p>
+            <ul class="beard-features">
+              <li><i class="fa-solid fa-check"></i> 2 Steam towel applications</li>
+              <li><i class="fa-solid fa-check"></i> Face & neck acupressure massage</li>
+              <li><i class="fa-solid fa-check"></i> Cold towel pore-closing ritual</li>
+            </ul>
+            <a href="#booking" class="btn btn-gold w-100 btn-select-service" data-service="Hot Towel Straight-Razor Shave">Book Shave Spa</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services & Pricing Menu -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">TRANSPARENT LUXURY PRICING</span>
+        <h2 class="section-title">Services We Provide</h2>
+        <div class="gold-divider"></div>
+        <p class="section-desc">All services include a complimentary beverage, hot towel finish, and expert styling advice.</p>
+      </div>
+
+      <div class="services-wrapper">
+        
+        <!-- Category 1: Hair Architecture -->
+        <div class="service-category">
+          <h3 class="category-title"><i class="fa-solid fa-scissors"></i> Hair Architecture & Styling</h3>
+          
+          <div class="service-item">
+            <div class="service-main">
+              <div class="service-name">The Signature Master Haircut</div>
+              <div class="service-price">$65</div>
+            </div>
+            <p class="service-detail">In-depth consultation, wash with organic tea tree shampoo, precision haircut, hot towel finish & styling.</p>
+            <div class="service-meta">
+              <span><i class="fa-regular fa-clock"></i> 45 Mins</span>
+              <a href="#booking" class="btn-link-gold btn-select-service" data-service="Signature Master Haircut">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-main">
+              <div class="service-name">Executive Skin Fade & Lineup</div>
+              <div class="service-price">$55</div>
+            </div>
+            <p class="service-detail">Custom gradient skin fade with foil shaver smooth finish and razor hairline edging.</p>
+            <div class="service-meta">
+              <span><i class="fa-regular fa-clock"></i> 45 Mins</span>
+              <a href="#booking" class="btn-link-gold btn-select-service" data-service="Executive Skin Fade">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-main">
+              <div class="service-name">Junior Gentleman Cut (Under 12)</div>
+              <div class="service-price">$40</div>
+            </div>
+            <p class="service-detail">Tailored haircut experience for young gentlemen. Gentle styling with natural pomade.</p>
+            <div class="service-meta">
+              <span><i class="fa-regular fa-clock"></i> 30 Mins</span>
+              <a href="#booking" class="btn-link-gold btn-select-service" data-service="Junior Gentleman Cut">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Beard Grooming & Shaving -->
+        <div class="service-category">
+          <h3 class="category-title"><i class="fa-solid fa-vest"></i> Beard Artistry & Shaving</h3>
+          
+          <div class="service-item">
+            <div class="service-main">
+              <div class="service-name">Royal Sculpted Beard Trim</div>
+              <div class="service-price">$45</div>
+            </div>
+            <p class="service-detail">Detailed beard shaping, razor cheek edging, hot towel wrap, and organic beard oil treatment.</p>
+            <div class="service-meta">
+              <span><i class="fa-regular fa-clock"></i> 30 Mins</span>
+              <a href="#booking" class="btn-link-gold btn-select-service" data-service="Royal Sculpted Beard Trim">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-main">
+              <div class="service-name">Hot Towel Full Razor Shave</div>
+              <div class="service-price">$50</div>
+            </div>
+            <p class="service-detail">Classical straight razor shave with essential steam oils, rich lather, and cold towel finish.</p>
+            <div class="service-meta">
+              <span><i class="fa-regular fa-clock"></i> 40 Mins</span>
+              <a href="#booking" class="btn-link-gold btn-select-service" data-service="Hot Towel Full Razor Shave">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-main">
+              <div class="service-name">Beard Hydration & Color Restoration</div>
+              <div class="service-price">$40</div>
+            </div>
+            <p class="service-detail">Deep conditioning oil mask and subtle grey blending for a fuller, youthful beard appearance.</p>
+            <div class="service-meta">
+              <span><i class="fa-regular fa-clock"></i> 25 Mins</span>
+              <a href="#booking" class="btn-link-gold btn-select-service" data-service="Beard Hydration & Color">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: VIP Luxury Packages -->
+        <div class="service-category service-category-featured">
+          <div class="featured-ribbon">VIP RECOMMENDED</div>
+          <h3 class="category-title"><i class="fa-solid fa-gem"></i> VIP Combination Packages</h3>
+          
+          <div class="service-item">
+            <div class="service-main">
+              <div class="service-name">The AURA Executive Experience</div>
+              <div class="service-price">$110</div>
+            </div>
+            <p class="service-detail">Signature Haircut + Royal Beard Trim + Charcoal Face Scrub + Steam Hot Towel + Top Shelf Drink.</p>
+            <div class="service-meta">
+              <span><i class="fa-regular fa-clock"></i> 75 Mins</span>
+              <a href="#booking" class="btn btn-gold btn-sm btn-select-service" data-service="The AURA Executive Experience">Book VIP Package</a>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-main">
+              <div class="service-name">Groom & Father Luxury Ritual</div>
+              <div class="service-price">$190</div>
+            </div>
+            <p class="service-detail">Dual VIP station package for 2 guests. Full haircuts, hot towel shaves, facial steam, and private lounge toast.</p>
+            <div class="service-meta">
+              <span><i class="fa-regular fa-clock"></i> 90 Mins</span>
+              <a href="#booking" class="btn btn-gold btn-sm btn-select-service" data-service="Groom & Father Luxury Ritual">Book VIP Package</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Aesthetic Salon Photos / Atmosphere Gallery -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">THE ATMOSPHERE & AMBIANCE</span>
+        <h2 class="section-title">Aesthetic Photos of Salon</h2>
+        <div class="gold-divider"></div>
+        <p class="section-desc">Immerse yourself in our custom-designed sanctuary crafted with imported Italian leather, dark mahogany wood, and ambient gold strip lighting.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item item-large">
+          <img src="assets/salon_hero.jpg" alt="AURA Salon Main Lounge" class="gallery-img">
+          <div class="gallery-caption">
+            <span class="gallery-tag">Interior Ambiance</span>
+            <h4>Main Grooming Sanctuary</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/haircut_fade.jpg" alt="Precision Barbershop Workstation" class="gallery-img">
+          <div class="gallery-caption">
+            <span class="gallery-tag">Craftsmanship</span>
+            <h4>Master Workstation</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/beard_sculpted.jpg" alt="Beard Shaping Experience" class="gallery-img">
+          <div class="gallery-caption">
+            <span class="gallery-tag">Beard Studio</span>
+            <h4>Hot Towel & Razor Ritual</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/haircut_pompadour.jpg" alt="Luxury Grooming Lounge" class="gallery-img">
+          <div class="gallery-caption">
+            <span class="gallery-tag">VIP Lounge</span>
+            <h4>Whiskey & Espresso Bar</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/haircut_crop.jpg" alt="Modern Styling Bay" class="gallery-img">
+          <div class="gallery-caption">
+            <span class="gallery-tag">Detailing</span>
+            <h4>Hair Architecture Studio</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback & Reviews Section -->
+  <section class="section reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">CLIENT VERDICT & TESTIMONIALS</span>
+        <h2 class="section-title">Feedback & Reviews</h2>
+        <div class="gold-divider"></div>
+        <p class="section-desc">Read real experiences from our discerning clientele or leave your own review.</p>
+      </div>
+
+      <!-- Rating Summary Card -->
+      <div class="rating-summary-card">
+        <div class="overall-rating-box">
+          <span class="big-rating-number">4.9</span>
+          <div class="star-row">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="rating-count-text">Based on 1,248 Verified Client Reviews</span>
+        </div>
+
+        <div class="rating-breakdown">
+          <div class="bar-row">
+            <span class="bar-label">5 Stars</span>
+            <div class="bar-container"><div class="bar-fill" style="width: 94%;"></div></div>
+            <span class="bar-percent">94%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">4 Stars</span>
+            <div class="bar-container"><div class="bar-fill" style="width: 5%;"></div></div>
+            <span class="bar-percent">5%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">3 Stars</span>
+            <div class="bar-container"><div class="bar-fill" style="width: 1%;"></div></div>
+            <span class="bar-percent">1%</span>
+          </div>
+        </div>
+
+        <div class="add-review-cta">
+          <button class="btn btn-gold" id="openReviewModalBtn"><i class="fa-solid fa-pen-to-square"></i> Leave a Review</button>
+        </div>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="reviews-grid" id="reviewsGrid">
+        
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">DM</div>
+              <div>
+                <h4 class="reviewer-name">David Miller</h4>
+                <span class="review-date">August 14, 2026 • Verified Booking</span>
+              </div>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">"Hands down the best fade and beard sculpting service in NYC. Marcus took the time to understand my hair growth pattern and delivered absolute perfection. The complimentary bourbon was a fantastic touch!"</p>
+          <div class="review-service-tag"><i class="fa-solid fa-scissors"></i> Service: Mid Skin Fade & Royal Beard Trim</div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">JR</div>
+              <div>
+                <h4 class="reviewer-name">Julian Ross</h4>
+                <span class="review-date">August 10, 2026 • Verified Booking</span>
+              </div>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">"The atmosphere here is unmatched. Dark marble, golden accents, zero wait times, and immaculate cleanliness. The hot towel straight razor shave left my skin completely smooth without any razor burn."</p>
+          <div class="review-service-tag"><i class="fa-solid fa-spa"></i> Service: Hot Towel Straight Razor Shave</div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">AK</div>
+              <div>
+                <h4 class="reviewer-name">Alexander Sterling</h4>
+                <span class="review-date">August 02, 2026 • Verified Booking</span>
+              </div>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">"Booked the Executive Package prior to a major keynote presentation. The attention to detail from the hairline line-up to the charcoal facial scrub was 10/10. Definitely my new permanent salon."</p>
+          <div class="review-service-tag"><i class="fa-solid fa-gem"></i> Service: The AURA Executive Experience</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Booking Section -->
+  <section class="section booking-section" id="booking">
+    <div class="container">
+      <div class="booking-wrapper">
+        <div class="booking-header text-center">
+          <span class="section-subtitle">ONLINE APPOINTMENT RESERVATIONS</span>
+          <h2 class="section-title">Reserve Your Chair</h2>
+          <div class="gold-divider"></div>
+          <p class="section-desc">Select your desired service, preferred barber, date, and time slot for instant confirmation.</p>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+          
+          <!-- Step 1: Choose Service -->
+          <div class="form-group">
+            <label for="bookingService" class="form-label"><i class="fa-solid fa-scissors"></i> 1. Select Service</label>
+            <select id="bookingService" class="form-select" required>
+              <option value="" disabled selected>Choose a Service / Package...</option>
+              <optgroup label="Haircuts & Styling">
+                <option value="Signature Master Haircut ($65)">Signature Master Haircut ($65 • 45m)</option>
+                <option value="Executive Skin Fade ($55)">Executive Skin Fade & Lineup ($55 • 45m)</option>
+                <option value="Textured Crop Haircut ($60)">French Textured Crop ($60 • 45m)</option>
+                <option value="Modern Pompadour Haircut ($65)">Modern Pompadour Cut ($65 • 45m)</option>
+                <option value="Executive Taper Fade ($50)">Executive Low Taper Fade ($50 • 40m)</option>
+              </optgroup>
+              <optgroup label="Beard Artistry">
+                <option value="Royal Sculpted Full Beard ($45)">Royal Sculpted Full Beard ($45 • 30m)</option>
+                <option value="Razor Lineup & Beard Shaping ($35)">Razor Lineup & Beard Shaping ($35 • 25m)</option>
+                <option value="Hot Towel Straight-Razor Shave ($50)">Hot Towel Straight Razor Shave ($50 • 40m)</option>
+              </optgroup>
+              <optgroup label="VIP Luxury Packages">
+                <option value="The AURA Executive Experience ($110)">The AURA Executive Experience ($110 • 75m)</option>
+                <option value="Groom & Father Luxury Ritual ($190)">Groom & Father Ritual ($190 • 90m)</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <!-- Step 2: Choose Barber / Specialist -->
+          <div class="form-group">
+            <label class="form-label"><i class="fa-solid fa-user-tie"></i> 2. Choose Master Barber</label>
+            <div class="barber-select-grid">
+              <label class="barber-option">
+                <input type="radio" name="barber" value="Master Barber Marcus (Fade Specialist)" checked>
+                <div class="barber-box">
+                  <div class="barber-icon"><i class="fa-solid fa-user"></i></div>
+                  <div class="barber-name">Marcus Vance</div>
+                  <div class="barber-role">Fade & Cut Specialist</div>
+                </div>
+              </label>
+
+              <label class="barber-option">
+                <input type="radio" name="barber" value="Antoine Laurent (Beard Sculptor)">
+                <div class="barber-box">
+                  <div class="barber-icon"><i class="fa-solid fa-user"></i></div>
+                  <div class="barber-name">Antoine Laurent</div>
+                  <div class="barber-role">Beard Artistry</div>
+                </div>
+              </label>
+
+              <label class="barber-option">
+                <input type="radio" name="barber" value="Julian Thorne (Executive Stylist)">
+                <div class="barber-box">
+                  <div class="barber-icon"><i class="fa-solid fa-user"></i></div>
+                  <div class="barber-name">Julian Thorne</div>
+                  <div class="barber-role">Classic Scissors</div>
+                </div>
+              </label>
+
+              <label class="barber-option">
+                <input type="radio" name="barber" value="First Available Master Stylist">
+                <div class="barber-box">
+                  <div class="barber-icon"><i class="fa-solid fa-bolt"></i></div>
+                  <div class="barber-name">First Available</div>
+                  <div class="barber-role">Fastest Slot</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 3: Date & Time Picker -->
+          <div class="form-row">
+            <div class="form-group col-half">
+              <label for="bookingDate" class="form-label"><i class="fa-regular fa-calendar"></i> 3. Appointment Date</label>
+              <input type="date" id="bookingDate" class="form-input" required>
+            </div>
+
+            <div class="form-group col-half">
+              <label class="form-label"><i class="fa-regular fa-clock"></i> 4. Preferred Time Slot</label>
+              <div class="time-slots-wrapper" id="timeSlotsContainer">
+                <button type="button" class="time-slot-btn" data-time="10:00 AM">10:00 AM</button>
+                <button type="button" class="time-slot-btn" data-time="11:30 AM">11:30 AM</button>
+                <button type="button" class="time-slot-btn active" data-time="01:00 PM">01:00 PM</button>
+                <button type="button" class="time-slot-btn" data-time="03:00 PM">03:00 PM</button>
+                <button type="button" class="time-slot-btn" data-time="05:00 PM">05:00 PM</button>
+                <button type="button" class="time-slot-btn" data-time="06:30 PM">06:30 PM</button>
+                <button type="button" class="time-slot-btn" data-time="07:30 PM">07:30 PM</button>
+              </div>
+              <input type="hidden" id="selectedTime" value="01:00 PM" required>
+            </div>
+          </div>
+
+          <!-- Step 4: Contact Details -->
+          <div class="form-row">
+            <div class="form-group col-third">
+              <label for="clientName" class="form-label">Full Name</label>
+              <input type="text" id="clientName" class="form-input" placeholder="e.g. John Smith" required>
+            </div>
+            <div class="form-group col-third">
+              <label for="clientPhone" class="form-label">Phone Number</label>
+              <input type="tel" id="clientPhone" class="form-input" placeholder="(555) 000-0000" required>
+            </div>
+            <div class="form-group col-third">
+              <label for="clientEmail" class="form-label">Email Address</label>
+              <input type="email" id="clientEmail" class="form-input" placeholder="john@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bookingNotes" class="form-label">Special Hair/Beard Requests or Preferences (Optional)</label>
+            <textarea id="bookingNotes" class="form-textarea" rows="2" placeholder="Tell us about your hair type, scalp sensitivity, or preferred drink (Whiskey, Espresso, Craft Beer)..."></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-gold btn-lg w-100" id="submitBookingBtn">
+            <i class="fa-solid fa-check-circle"></i> Confirm Instant Reservation
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col footer-brand">
+        <a href="#" class="brand-logo">
+          <span class="logo-mark">A</span>
+          <div class="logo-text">
+            <span class="brand-name">AURA</span>
+            <span class="brand-sub">ATELIER & GROOMING</span>
+          </div>
+        </a>
+        <p class="footer-about">Providing world-class hair architecture, beard sculpting, and executive relaxation for gentlemen of distinction.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#hours">Opening Timings</a></li>
+          <li><a href="#haircuts">Types of Haircuts</a></li>
+          <li><a href="#beards">Beard Styles</a></li>
+          <li><a href="#services">Service Menu</a></li>
+          <li><a href="#booking">Online Booking</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Location & Contact</h4>
+        <ul class="footer-contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> 450 Fifth Avenue, Suite 12, Manhattan, NY 10018</li>
+          <li><i class="fa-solid fa-phone"></i> (212) 555-0198</li>
+          <li><i class="fa-solid fa-envelope"></i> concierge@aura-atelier.com</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Current Salon Status</h4>
+        <div class="footer-status-box">
+          <div class="pulse-dot active"></div>
+          <div>
+            <strong id="footerStatusText">OPEN NOW</strong>
+            <p id="footerHoursText">Mon-Fri 9:00 AM - 9:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 AURA Atelier & Luxury Grooming Lounge. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking Confirmation Modal -->
+  <div class="modal-overlay" id="confirmationModal">
+    <div class="modal-card">
+      <div class="modal-header text-center">
+        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h2 class="modal-title">Reservation Confirmed!</h2>
+        <p class="modal-subtitle">Your appointment has been successfully scheduled at AURA Atelier.</p>
+      </div>
+
+      <div class="confirmation-summary" id="confirmationSummary">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-gold w-100" id="closeModalBtn"><i class="fa-solid fa-thumbs-up"></i> Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Write a Review Modal -->
+  <div class="modal-overlay" id="reviewModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeReviewModalBtn">&times;</button>
+      <div class="modal-header">
+        <h2 class="modal-title"><i class="fa-solid fa-pen-to-square"></i> Leave a Review</h2>
+        <p class="modal-subtitle">Share your AURA Atelier grooming experience with us.</p>
+      </div>
+
+      <form id="reviewForm">
+        <div class="form-group">
+          <label class="form-label">Your Rating</label>
+          <div class="star-rating-picker" id="starPicker">
+            <i class="fa-solid fa-star" data-rating="1"></i>
+            <i class="fa-solid fa-star" data-rating="2"></i>
+            <i class="fa-solid fa-star" data-rating="3"></i>
+            <i class="fa-solid fa-star" data-rating="4"></i>
+            <i class="fa-solid fa-star active" data-rating="5"></i>
+          </div>
+          <input type="hidden" id="reviewRatingInput" value="5">
+        </div>
+
+        <div class="form-group">
+          <label for="reviewAuthor" class="form-label">Your Name</label>
+          <input type="text" id="reviewAuthor" class="form-input" placeholder="e.g. Robert Vance" required>
+        </div>
+
+        <div class="form-group">
+          <label for="reviewService" class="form-label">Service Received</label>
+          <input type="text" id="reviewService" class="form-input" placeholder="e.g. Mid Skin Fade & Hot Towel Shave" required>
+        </div>
+
+        <div class="form-group">
+          <label for="reviewComments" class="form-label">Your Review</label>
+          <textarea id="reviewComments" class="form-textarea" rows="3" placeholder="Tell us about the barber, hair styling, atmosphere, or drink service..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold w-100"><i class="fa-solid fa-paper-plane"></i> Submit Verified Review</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Style Details Modal -->
+  <div class="modal-overlay" id="styleDetailModal">
+    <div class="modal-card style-detail-card">
+      <button class="modal-close-btn" id="closeStyleModalBtn">&times;</button>
+      <div id="styleDetailContent">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Mobile Booking Bar -->
+  <div class="sticky-mobile-bar">
+    <div class="mobile-bar-info">
+      <span class="mobile-bar-status" id="mobileBarStatus"><i class="fa-solid fa-circle text-success"></i> Open Now</span>
+      <span class="mobile-bar-sub">Closes at 9:00 PM</span>
+    </div>
+    <a href="#booking" class="btn btn-gold btn-sm"><i class="fa-solid fa-calendar"></i> Book Now</a>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
