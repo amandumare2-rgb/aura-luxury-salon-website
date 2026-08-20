@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AURA LUXE SALON & STUDIO - WARM ALABASTER & CHAMPAGNE GOLD DESIGN SYSTEM
+   AURA LUXE HAIR & BEARD STUDIO - WARM ALABASTER & CHAMPAGNE GOLD DESIGN SYSTEM
    ========================================================================== */
 
 /* --- CSS Variables & Design Tokens --- */
@@ -90,6 +90,12 @@ button, input, select, textarea {
 .section {
   padding: 6rem 0;
   position: relative;
+}
+
+.section-alt {
+  background-color: var(--bg-sand);
+  border-top: 1px solid var(--border-sand);
+  border-bottom: 1px solid var(--border-sand);
 }
 
 .text-center {
@@ -489,16 +495,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* --- Trending Hairstyles & Beard Styles Section --- */
-.trending-section {
-  background-color: var(--bg-sand);
-  border-top: 1px solid var(--border-sand);
-  border-bottom: 1px solid var(--border-sand);
+/* --- Styles Showcase Section --- */
+.styles-section {
+  background-color: var(--bg-alabaster);
 }
 
 .trending-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
@@ -574,7 +578,7 @@ h1, h2, h3, h4, h5, h6 {
   100% { transform: scale(0.98); }
 }
 
-.trending-price-tag, .style-price-tag {
+.trending-price-tag {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -619,113 +623,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .trending-footer {
   margin-top: auto;
-}
-
-/* --- Services Section --- */
-.category-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-}
-
-.tab-btn {
-  background: var(--bg-sand);
-  border: 1px solid var(--border-sand);
-  color: var(--text-muted);
-  padding: 0.75rem 1.6rem;
-  border-radius: var(--radius-full);
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 44px;
-}
-
-.tab-btn:hover, .tab-btn.active {
-  background-color: var(--gold-primary);
-  color: var(--bg-white);
-  border-color: transparent;
-  box-shadow: var(--shadow-gold);
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-}
-
-.service-card {
-  background-color: var(--bg-sand);
-  border: 1px solid var(--border-sand);
-  border-radius: var(--radius-lg); /* rounded-2xl */
-  padding: 2.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: var(--shadow-subtle);
-  transition: var(--transition);
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--border-gold);
-  box-shadow: var(--shadow-elevated);
-}
-
-.service-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.service-badge {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--gold-primary);
-  background: var(--bg-white);
-  padding: 0.25rem 0.8rem;
-  border-radius: var(--radius-full);
-}
-
-.service-duration {
-  font-size: 0.85rem;
-  color: var(--text-subtle);
-}
-
-.service-title {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-  line-height: 1.25;
-}
-
-.service-desc {
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  margin-bottom: 1.75rem;
-  flex-grow: 1;
-}
-
-.service-card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--border-sand);
-}
-
-.service-price {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--text-charcoal);
 }
 
 /* --- Interactive Booking Engine Section --- */
