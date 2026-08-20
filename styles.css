@@ -276,7 +276,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 44px;
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section & Image Carousel Slider --- */
 .hero-section {
   padding: 5rem 0 6rem;
 }
@@ -348,30 +348,118 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--gold-primary);
 }
 
-.hero-image-card {
+/* Hero Carousel Slider Component */
+.hero-slider-wrapper {
   position: relative;
   border-radius: var(--radius-lg); /* rounded-2xl */
   overflow: hidden;
   box-shadow: var(--shadow-elevated);
+  aspect-ratio: 4/5;
+  background: var(--bg-sand);
 }
 
-.hero-img {
+.hero-slider-track {
+  position: relative;
   width: 100%;
-  aspect-ratio: 4/5;
+  height: 100%;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-slide-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-lg);
+}
+
+.slide-caption-tag {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background: rgba(250, 248, 245, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-sand);
+  color: var(--text-charcoal);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(250, 248, 245, 0.85);
+  border: 1px solid var(--border-sand);
+  color: var(--text-charcoal);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn:hover {
+  background-color: var(--gold-primary);
+  color: var(--bg-white);
+}
+
+.btn-prev { left: 1rem; }
+.btn-next { right: 1rem; }
+
+.slider-dots {
+  position: absolute;
+  bottom: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.slider-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.slider-dots .dot.active {
+  background: var(--gold-primary);
+  width: 22px;
+  border-radius: var(--radius-full);
 }
 
 .hero-floating-card {
   position: absolute;
-  bottom: 1.75rem;
-  left: 1.75rem;
-  right: 1.75rem;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  z-index: 10;
   background: rgba(250, 248, 245, 0.92);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border-sand);
   border-radius: var(--radius-md);
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.25rem;
   box-shadow: var(--shadow-subtle);
 }
 
@@ -379,13 +467,13 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 .rating-stars {
   color: var(--gold-primary);
   letter-spacing: 2px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .rating-score {
@@ -395,17 +483,142 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .floating-text {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-style: italic;
   color: var(--text-muted);
   margin: 0;
 }
 
-/* --- About Strip --- */
-.about-strip {
+/* --- Trending Hairstyles & Beard Styles Section --- */
+.trending-section {
   background-color: var(--bg-sand);
   border-top: 1px solid var(--border-sand);
   border-bottom: 1px solid var(--border-sand);
+}
+
+.trending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.trending-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-sand);
+  border-radius: var(--radius-lg); /* rounded-2xl */
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-elevated);
+}
+
+.trending-image-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--bg-sand);
+}
+
+.trending-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.trending-card:hover .trending-img {
+  transform: scale(1.08);
+}
+
+.trending-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.trending-badge.hot {
+  background: #1C1A18;
+  color: #F59E0B;
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  animation: pulseFire 2s infinite;
+}
+
+.trending-badge.classic {
+  background: var(--bg-white);
+  color: var(--gold-primary);
+  border: 1px solid var(--border-gold);
+}
+
+.trending-badge.signature {
+  background: var(--gold-primary);
+  color: var(--bg-white);
+}
+
+@keyframes pulseFire {
+  0% { transform: scale(0.98); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(0.98); }
+}
+
+.trending-price-tag, .style-price-tag {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(28, 26, 24, 0.9);
+  backdrop-filter: blur(8px);
+  color: var(--gold-light);
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--radius-sm);
+}
+
+.trending-content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.trending-cat {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-primary);
+  margin-bottom: 0.4rem;
+}
+
+.trending-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.25;
+}
+
+.trending-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.trending-footer {
+  margin-top: auto;
 }
 
 /* --- Services Section --- */
